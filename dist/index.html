@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1525">
+  <meta name="description" content="闭上眼睛，在心里想个问题，然后轻触封面。">
+  <title>答案之书</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <div class="dust" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <main class="app" id="app" data-state="closed">
+    <header class="topbar">
+      <div class="brand"><div><span data-i18n="brand">答案之书</span></div></div>
+      <div class="top-actions">
+      <div class="language-switch" role="group" aria-label="语言" id="languageSwitch">
+        <button id="zhButton" class="selected" aria-pressed="true" lang="zh-CN" aria-label="中文">ZH</button>
+        <button id="enButton" aria-pressed="false" lang="zh-CN" aria-label="英文">EN</button>
+      </div>
+      <button id="settingsButton" class="settings-button" aria-label="设置" title="设置"><span aria-hidden="true">⚙</span></button>
+      </div>
+    </header>
+    <section class="stage" id="stage" aria-label="答案之书">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="book" id="book">
+        <div class="back-board" aria-hidden="true"></div>
+        <div class="page-stack" aria-hidden="true"></div>
+        <article class="answer-page paper" id="answerPage" aria-hidden="true">
+          <div class="answer-content" id="answerContent">
+            <p id="answerText" class="answer-text"></p>
+          </div>
+        </article>
+        <div class="turning-page leaf-three" aria-hidden="true"><div class="paper face"></div><div class="paper reverse"></div></div>
+        <div class="turning-page leaf-two" aria-hidden="true"><div class="paper face"></div><div class="paper reverse"></div></div>
+        <div class="turning-page leaf-one" aria-hidden="true"><div class="paper face"></div><div class="paper reverse"></div></div>
+        <div class="cover" id="cover">
+          <button class="cover-front" id="coverButton" aria-label="翻开答案之书">
+            <span class="cover-title" id="coverTitle">答案<br>之书</span>
+          </button>
+          <div class="cover-back paper" aria-hidden="true"></div>
+        </div>
+        <div class="ribbon" aria-hidden="true"></div>
+      </div>
+      <div class="white-wash" id="whiteWash" aria-hidden="true"></div>
+    </section>
+    <section class="interaction">
+      <p class="instruction" id="instruction">闭上眼睛，在心里想个问题，<br>然后轻触封面。</p>
+      <div class="controls result-controls" id="resultControls" hidden>
+        <button class="primary" id="againButton"><span data-i18n="again">再问一次</span></button>
+      </div>
+    </section>
+  </main>
+  <div class="settings-overlay" id="settingsOverlay" hidden>
+    <section class="settings-panel" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <div class="settings-title"><h2 id="settingsTitle" data-i18n="settings">设置</h2><button id="closeSettings" aria-label="关闭设置">×</button></div>
+      <label class="setting-row"><span><strong data-i18n="music">背景音乐</strong></span><input id="musicToggle" type="checkbox" checked><span class="toggle" aria-hidden="true"></span></label>
+      <label class="setting-row"><span><strong data-i18n="effects">翻页音效</strong></span><input id="effectsToggle" type="checkbox" checked><span class="toggle" aria-hidden="true"></span></label>
+      <label class="setting-row"><span><strong data-i18n="gentle">轻柔动效</strong></span><input id="gentleToggle" type="checkbox"><span class="toggle" aria-hidden="true"></span></label>
+      <label class="setting-row"><span><strong data-i18n="haptic">轻触反馈</strong></span><input id="hapticToggle" type="checkbox" checked><span class="toggle" aria-hidden="true"></span></label>
+    </section>
+  </div>
+  <p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+  <script src="./assets/answers.js"></script>
+  <script src="./assets/sound.js"></script>
+  <script src="./assets/typography.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

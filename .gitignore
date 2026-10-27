@@ -1,0 +1,13 @@
+.DS_Store
+*.zip
+originals/
+release/
+asset-manifest.json
+使用说明.txt
+content/answers-*.json
+!content/answers-bilingual.json
+qa/*
+!qa/*.cjs
+!qa/*.py
+!qa/mobile-check.html
+!qa/mobile-check.js
